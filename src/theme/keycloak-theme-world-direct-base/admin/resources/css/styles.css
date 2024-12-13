@@ -1,0 +1,92 @@
+:root {
+    --primary-color: var(--color-wd-blue-2);
+    --secondary-color: var(--color-wd-blue-3);
+    --text-color: var(--color-wd-black);
+}
+
+:root,
+.pf-c-button,
+.pf-c-button:hover {
+    --pf-c-button--m-primary--BackgroundColor: rgb(var(--primary-color));
+    --pf-c-button--m-primary--hover--BackgroundColor: rgb(var(--secondary-color));
+    transition: background-color 100ms ease;
+}
+
+:root,
+.pf-c-tabs,
+.pf-c-tabs__item.pf-m-current {
+    --pf-c-tabs__item--m-current__link--after--BorderColor: rgb(var(--primary-color));
+}
+
+:root,
+.pf-c-switch__input:checked~.pf-c-switch__toggle {
+    --pf-c-switch__input--checked__toggle--BackgroundColor: rgb(var(--primary-color));
+}
+
+.pf-c-check__input,
+input[type="checkbox"] {
+    accent-color: rgb(var(--primary-color));
+}
+
+#nav-toggle {
+    --pf-c-button--m-plain--Color: rgb(var(--primary-color));
+    transition: color 100ms ease;
+}
+
+#nav-toggle:hover {
+    --pf-c-button--m-plain--Color: rgb(var(--secondary-color));
+}
+
+.pf-c-page__header {
+    background:
+            url('../img/wd-background.png');
+    /* background-color: #FFFFFF; */
+    background-color: #ffffff;
+    background-size: cover; 
+    background-blend-mode: normal; 
+    background-repeat: no-repeat;
+    background-size: auto 140%;
+    background-position: right top;
+    box-shadow: rgba(0, 0, 0, 0.50) 0 0 5px;
+}
+
+@media (max-width: 1100px) {
+    .pf-c-page__header {
+        background-image: unset;
+    }
+
+    /** Since background image is gone, background color is white. Therefore, elements must have different color now. */
+    .pf-c-dropdown {
+        --pf-c-dropdown__toggle--m-plain--Color: rgb(var(--text-color));
+        --pf-c-dropdown--m-plain__toggle-icon--Color: rgb(var(--text-color));
+    }
+    
+    .pf-c-dropdown:hover,
+    .pf-c-dropdown__toggle.pf-m-plain:hover,
+    .pf-c-dropdown__toggle.pf-m-plain:focus,
+    .pf-c-dropdown__toggle.pf-m-plain:active,
+    .pf-c-dropdown__toggle.pf-m-plain.pf-m-active,
+    .pf-m-expanded>.pf-c-dropdown__toggle.pf-m-plain
+    {
+        --pf-c-dropdown__toggle--m-plain--Color: rgb(var(--text-color));
+        --pf-c-dropdown--m-plain__toggle-icon--Color: rgb(var(--text-color));
+    }
+}
+
+.pf-c-page__header-brand-link {
+    margin-left: 15px;
+}
+
+/* .pf-c-page__header-brand::after {
+    content: "Development";
+    color: rgb(var(--text-color));
+    align-self: end;
+    margin-left: 5px;
+    margin-bottom: 5px;
+} */
+
+a:has(> img.keycloak__pageheader_brand) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

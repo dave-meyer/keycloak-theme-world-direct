@@ -1,0 +1,17 @@
+:root {
+  /* Primary Colors */
+  --color-wd-blue-1: 0 58 93;
+  --color-wd-blue-2: 0 110 173;
+  --color-wd-blue-3: 110 161 207;
+  --color-wd-green-1: 175 202 11;
+
+  --color-wd-dark-gray: 30 31 22;
+  --color-wd-black: 0 0 0;
+  --color-wd-white: 255 255 255;
+
+  /* Secondary Colors */
+  --color-wd-gray-1: 239 237 235;
+  --color-wd-gray-2: 224 220 216;
+  --color-wd-gray-3: 209 203 199;
+  --color-wd-gray-4: 198 192 187;
+}
