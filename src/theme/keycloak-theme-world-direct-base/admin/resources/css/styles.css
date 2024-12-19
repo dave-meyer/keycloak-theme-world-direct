@@ -2,6 +2,7 @@
     --primary-color: var(--color-wd-blue-2);
     --secondary-color: var(--color-wd-blue-3);
     --text-color: var(--color-wd-black);
+    --logo-small: var('../img/wd-keycloak-logo-small.svg');
 }
 
 :root,
@@ -40,7 +41,6 @@ input[type="checkbox"] {
 .pf-c-page__header {
     background:
             url('../img/wd-background.png');
-    /* background-color: #FFFFFF; */
     background-color: #ffffff;
     background-size: cover; 
     background-blend-mode: normal; 
@@ -71,19 +71,32 @@ input[type="checkbox"] {
         --pf-c-dropdown__toggle--m-plain--Color: rgb(var(--text-color));
         --pf-c-dropdown--m-plain__toggle-icon--Color: rgb(var(--text-color));
     }
+
+    .pf-c-page__header-brand-link a {
+        background-image: url('../img/wd-keycloak-logo-small.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #masthead-logo {
+        visibility: hidden;
+    }
 }
 
 .pf-c-page__header-brand-link {
     margin-left: 15px;
 }
 
-/* .pf-c-page__header-brand::after {
-    content: "Development";
-    color: rgb(var(--text-color));
+.pf-c-page__header-brand::after {
+    content: var(--env-text);
+    color: rgb(var(--color-wd-green-1));
+    font-weight: bold;
+    font-family: 'Cairo';
+
     align-self: end;
     margin-left: 5px;
     margin-bottom: 5px;
-} */
+}
 
 a:has(> img.keycloak__pageheader_brand) {
     display: flex;
